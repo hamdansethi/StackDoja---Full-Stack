@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <script>
+        const weight = parseFloat(prompt("Enter your weight in Kg: "));
+        const height = parseFloat(prompt("Enter your height in meters: "));
+        
+        const bmi = weight/ (height ** 2);
+        
+
+        if (bmi) {
+            if (bmi < 18.5) {
+                bmiCategory = 'Underweight';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                bmiCategory = 'Normal weight';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                bmiCategory = 'Overweight';
+            } else {
+                bmiCategory = 'Obesity';
+            }
+
+            alert(`Your BMI is: ${bmi.toFixed(2)} (${bmiCategory})`);
+        }
+
+    </script>
+</body>
+</html>
